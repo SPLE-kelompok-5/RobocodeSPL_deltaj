@@ -6,3 +6,6 @@ SerpentineMovement:
 
 SpinningRadar:
 <decore/SpinningRadar.decore>
+
+RandomMovement:
+<decore/RandomMovement.decore>

@@ -1,0 +1,16 @@
+delta RandomMovement {
+    modifies jab.module.Movement {
+        modifies move() {
+            if (bot.getTime() % 30 == 0) {
+                double randomTurn = (Math.random() - 0.5) * Math.PI;
+                bot.setTurnRightRadians(randomTurn);
+            }
+
+            if (bot.enemy != null) {
+                bot.setAhead(100 + Math.random() * 50);
+            } else {
+                bot.setAhead(80 + Math.random() * 40);
+            }
+        }
+    }
+}
