@@ -1,0 +1,23 @@
+delta CircularMovement {
+    modifies jab.module.Movement {
+        modifies move() {
+            // Check if the SelectEnemy feature has locked onto a target
+            if (bot.enemy != null) {
+                // Orbit the enemy by strafing perpendicular to the bearing
+                // Turn 90 degrees offset from the enemy bearing to maintain circular orbit
+                double orbitAngle = bot.enemy.bearingRadians + (Math.PI / 2);
+
+                // Adjust orbit tightness: smaller value = wider orbit, larger = tighter
+                double orbitTightness = 0.1;
+                double turnAmount = orbitAngle * orbitTightness;
+
+                bot.setTurnRightRadians(turnAmount);
+                bot.setAhead(150);
+            } else {
+                // Fallback: No enemy locked yet, spin and search
+                bot.setTurnRight(15);
+                bot.setAhead(100);
+            }
+        }
+    }
+}
