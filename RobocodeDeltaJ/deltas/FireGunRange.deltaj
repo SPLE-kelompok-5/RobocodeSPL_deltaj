@@ -1,0 +1,20 @@
+delta FireGunRange {
+    modifies jab.module.Gun {
+        modifies fire() {
+            if (bot.enemy != null) {
+                double distance = bot.enemy.distance;
+                double power;
+
+                if (distance < 100) {
+                    power = 3; 
+                } else if (distance < 300) {
+                    power = 2; 
+                } else {
+                    power = 1;
+                }
+
+                bot.setFire(power);
+            }
+        }
+    }
+}
