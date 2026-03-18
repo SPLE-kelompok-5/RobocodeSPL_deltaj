@@ -9,3 +9,12 @@ CircularMovement:
 
 SpinningRadar:
 <decore/SpinningRadar.decore>
+
+LockOnRadar:
+<decore/LockOnRadar.decore>
+
+NearestEnemyTargeting:
+<decore/NearestEnemyTargeting.decore>
+
+AlwaysFireGun:
+<decore/AlwaysFireGun.decore>
