@@ -10,6 +10,9 @@ CircularMovement:
 SpinningRadar:
 <decore/SpinningRadar.decore>
 
+RandomMovement:
+<decore/RandomMovement.decore>
+
 LockOnRadar:
 <decore/LockOnRadar.decore>
 
@@ -18,3 +21,12 @@ NearestEnemyTargeting:
 
 AlwaysFireGun:
 <decore/AlwaysFireGun.decore>
+
+Cannon:
+<decore/Cannon.decore>
+
+RandomSelectEnemy:
+<decore/RandomSelectEnemy.decore>
+
+NaiveTargeting:
+<decore/NaiveTargeting.decore>
