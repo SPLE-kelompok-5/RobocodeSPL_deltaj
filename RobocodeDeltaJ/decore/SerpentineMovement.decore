@@ -1,0 +1,22 @@
+ configuration delta "SerpentineMovement"
+	dialect <http://www.emftext.org/java>
+		modifies <../src/jab/module/Movement.java>
+		{
+	modifyStatementListContainer(<method:jab.module.Movement.move()>, "public void move() {
+            // Check if the SelectEnemy feature has locked onto a target
+            if (bot.enemy != null) {
+                // Calculate an oscillation of roughly +/- 45 degrees (PI/4 radians)
+                double oscillation = Math.sin(bot.getTime() * 0.2) * (Math.PI / 4);
+                
+                // Turn towards the selected target enemy, plus the serpentine sway
+                bot.setTurnRightRadians(bot.enemy.bearingRadians + oscillation);
+                bot.setAhead(100);
+            } else {
+                // Fallback: If no enemies are scanned/selected yet, just serpentine blindly
+                bot.setTurnRight(Math.sin(bot.getTime() * 0.2) * 30);
+                bot.setAhead(100);
+            }
+	}
+", "SerpentineMovement", false);
+	}
+	
