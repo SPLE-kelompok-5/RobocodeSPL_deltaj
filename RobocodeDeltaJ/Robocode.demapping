@@ -24,3 +24,9 @@ SimpleTargeting:
 
 AlwaysFireGun:
 <decore/AlwaysFireGun.decore>
+
+NearestSelectEnemy:
+<decore/NearestSelectEnemy.decore>
+
+SafeDistanceSelectEnemy:
+<decore/SafeDistanceSelectEnemy.decore>

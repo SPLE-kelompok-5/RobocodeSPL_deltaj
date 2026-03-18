@@ -1,0 +1,12 @@
+delta SafeDistanceSelectEnemy {
+    modifies jab.module.SelectEnemy {
+        modifies select() {
+            if (bot.enemy != null) {
+                // Lepas target kalau terlalu dekat
+                if (bot.enemy.distance < 100) {
+                    bot.enemy = null;
+                }
+            }
+        }
+    }
+}
