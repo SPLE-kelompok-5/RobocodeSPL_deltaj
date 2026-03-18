@@ -1,0 +1,11 @@
+delta Cannon {
+    modifies jab.module.Gun {
+        modifies fire() {
+            // Wait patiently for the gun to completely cool down
+            if (bot.getGunHeat() == 0.0) {
+                // Fire a massive, slow, 3.0 power slug
+                bot.setFire(3.0);
+            }
+        }
+    }
+}

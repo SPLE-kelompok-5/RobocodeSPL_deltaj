@@ -21,3 +21,12 @@ NearestEnemyTargeting:
 
 AlwaysFireGun:
 <decore/AlwaysFireGun.decore>
+
+Cannon:
+<decore/Cannon.decore>
+
+RandomSelectEnemy:
+<decore/RandomSelectEnemy.decore>
+
+NaiveTargeting:
+<decore/NaiveTargeting.decore>

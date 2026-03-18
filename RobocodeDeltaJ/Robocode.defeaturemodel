@@ -15,9 +15,21 @@
           <features maxCardinality="1" name="RandomMovement"/>
         </groups>
       </features>
-      <features minCardinality="1" maxCardinality="1" name="SelectEnemy"/>
-      <features minCardinality="1" maxCardinality="1" name="Gun"/>
-      <features minCardinality="1" maxCardinality="1" name="Targeting"/>
+      <features minCardinality="1" maxCardinality="1" name="SelectEnemy">
+        <groups minCardinality="1" maxCardinality="1">
+          <features maxCardinality="1" name="RandomSelectEnemy"/>
+        </groups>
+      </features>
+      <features minCardinality="1" maxCardinality="1" name="Gun">
+        <groups minCardinality="1" maxCardinality="1">
+          <features maxCardinality="1" name="Cannon"/>
+        </groups>
+      </features>
+      <features minCardinality="1" maxCardinality="1" name="Targeting">
+        <groups maxCardinality="1">
+          <features maxCardinality="1" name="NaiveTargeting"/>
+        </groups>
+      </features>
     </groups>
   </rootFeature>
 </feature:DEFeatureModel>
