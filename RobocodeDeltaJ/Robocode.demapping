@@ -4,5 +4,8 @@ NoMovement:
 SerpentineMovement:
 <decore/SerpentineMovement.decore>
 
+CircularMovement:
+<decore/CircularMovement.decore>
+
 SpinningRadar:
 <decore/SpinningRadar.decore>

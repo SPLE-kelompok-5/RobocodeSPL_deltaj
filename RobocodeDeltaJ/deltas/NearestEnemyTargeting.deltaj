@@ -1,0 +1,12 @@
+delta NearestEnemyTargeting {
+    modifies jab.module.Targeting {
+        modifies target() {
+            // Target the nearest enemy based on distance
+            if (bot.enemy != null) {
+                // Turn gun towards the nearest enemy bearing
+                double gunTurn = bot.enemy.bearingRadians + bot.getHeadingRadians() - bot.getGunHeadingRadians();
+                bot.setTurnGunRightRadians(gunTurn);
+            }
+        }
+    }
+}
