@@ -1,0 +1,15 @@
+delta SimpleTargeting {
+    modifies jab.module.Gun {
+        modifies fire() {
+            if (bot.enemy != null) {
+                // Arahkan gun ke posisi musuh
+                bot.setTurnGunRightRadians(bot.enemy.bearingRadians);
+
+                // Tembak kalau arah gun sudah hampir pas
+                if (Math.abs(bot.getGunTurnRemaining()) < 5) {
+                    bot.setFire(2);
+                }
+            }
+        }
+    }
+}

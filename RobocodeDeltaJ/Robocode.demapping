@@ -19,8 +19,17 @@ LockOnRadar:
 NearestEnemyTargeting:
 <decore/NearestEnemyTargeting.decore>
 
+SimpleTargeting:
+<decore/SimpleTargeting.decore>
+
 AlwaysFireGun:
 <decore/AlwaysFireGun.decore>
+
+NearestSelectEnemy:
+<decore/NearestSelectEnemy.decore>
+
+SafeDistanceSelectEnemy:
+<decore/SafeDistanceSelectEnemy.decore>
 
 Cannon:
 <decore/Cannon.decore>

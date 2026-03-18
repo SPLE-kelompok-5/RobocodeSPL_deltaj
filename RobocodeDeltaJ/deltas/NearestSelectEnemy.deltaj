@@ -1,0 +1,14 @@
+delta NearestSelectEnemy {
+    modifies jab.module.SelectEnemy {
+        modifies select() {
+            // Select the nearest enemy based on distance
+            // Enemy is updated via onScannedRobot in Module.java
+            // Reset enemy lock if it has moved too far or out of range
+            if (bot.enemy != null) {
+                if (bot.enemy.distance > 1000) {
+                    bot.enemy = null;
+                }
+            }
+        }
+    }
+}
