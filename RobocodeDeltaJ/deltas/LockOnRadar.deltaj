@@ -1,0 +1,16 @@
+delta LockOnRadar {
+    modifies jab.module.Radar {
+        modifies scan() {
+            // Lock radar onto the enemy if detected
+            if (bot.enemy != null) {
+                // Calculate the radar turn needed to keep facing the enemy
+                double radarTurn = bot.enemy.bearingRadians + bot.getHeadingRadians() - bot.getRadarHeadingRadians();
+                // Multiply by 2 to ensure radar sweeps back if enemy is lost
+                bot.setTurnRadarRightRadians(radarTurn * 2);
+            } else {
+                // Fallback: spin to find enemy
+                bot.setTurnRadarRightRadians(1.5707963267948966);
+            }
+        }
+    }
+}

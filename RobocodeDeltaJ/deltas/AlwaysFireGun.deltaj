@@ -1,0 +1,10 @@
+delta AlwaysFireGun {
+    modifies jab.module.Gun {
+        modifies fire() {
+            // Always fire at full power if enemy is detected
+            if (bot.enemy != null) {
+                bot.setFire(3);
+            }
+        }
+    }
+}

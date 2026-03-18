@@ -4,8 +4,20 @@ NoMovement:
 SerpentineMovement:
 <decore/SerpentineMovement.decore>
 
+CircularMovement:
+<decore/CircularMovement.decore>
+
 SpinningRadar:
 <decore/SpinningRadar.decore>
 
 RandomMovement:
 <decore/RandomMovement.decore>
+
+LockOnRadar:
+<decore/LockOnRadar.decore>
+
+NearestEnemyTargeting:
+<decore/NearestEnemyTargeting.decore>
+
+AlwaysFireGun:
+<decore/AlwaysFireGun.decore>
