@@ -6,6 +6,7 @@
         <groups minCardinality="1" maxCardinality="1">
           <features maxCardinality="1" name="SpinningRadar"/>
           <features maxCardinality="1" name="MouseRadar"/>
+          <features maxCardinality="1" name="LockOnRadar"/>
         </groups>
       </features>
       <features minCardinality="1" maxCardinality="1" name="Movement">
@@ -16,8 +17,17 @@
         </groups>
       </features>
       <features minCardinality="1" maxCardinality="1" name="SelectEnemy"/>
-      <features minCardinality="1" maxCardinality="1" name="Gun"/>
-      <features minCardinality="1" maxCardinality="1" name="Targeting"/>
+      <features minCardinality="1" maxCardinality="1" name="Gun">
+        <groups maxCardinality="2">
+          <features maxCardinality="1" name="FireGunRange"/>
+          <features maxCardinality="1" name="AlwaysFireGun"/>
+        </groups>
+      </features>
+      <features minCardinality="1" maxCardinality="1" name="Targeting">
+        <groups maxCardinality="1">
+          <features maxCardinality="1" name="NearestEnemyTargeting"/>
+        </groups>
+      </features>
     </groups>
   </rootFeature>
 </feature:DEFeatureModel>
