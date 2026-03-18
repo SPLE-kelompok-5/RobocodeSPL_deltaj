@@ -14,25 +14,28 @@
           <features maxCardinality="1" name="NoMovement"/>
           <features maxCardinality="1" name="SerpentineMovement"/>
           <features maxCardinality="1" name="RandomMovement"/>
+          <features maxCardinality="1" name="CircularMovement"/>
         </groups>
       </features>
-      <features minCardinality="1" maxCardinality="1" name="SelectEnemy"/>
       <features minCardinality="1" maxCardinality="1" name="Gun">
-        <groups maxCardinality="1">
+        <groups minCardinality="1" maxCardinality="1">
           <features maxCardinality="1" name="FireGunRange"/>
           <features maxCardinality="1" name="AlwaysFireGun"/>
           <features maxCardinality="1" name="Cannon"/>
         </groups>
+      </features>
       <features minCardinality="1" maxCardinality="1" name="SelectEnemy">
-        <groups minCardinality="1" maxCardinality="1">
+        <groups minCardinality="1" maxCardinality="3">
           <features maxCardinality="1" name="RandomSelectEnemy"/>
+          <features maxCardinality="1" name="NearestSelectEnemy"/>
+          <features maxCardinality="1" name="SafeDistanceSelectEnemy"/>
         </groups>
       </features>
-      </features>
       <features minCardinality="1" maxCardinality="1" name="Targeting">
-        <groups maxCardinality="1">
+        <groups minCardinality="1" maxCardinality="1">
           <features maxCardinality="1" name="NearestEnemyTargeting"/>
           <features maxCardinality="1" name="NaiveTargeting"/>
+          <features maxCardinality="1" name="SimpleTargeting"/>
         </groups>
       </features>
     </groups>
