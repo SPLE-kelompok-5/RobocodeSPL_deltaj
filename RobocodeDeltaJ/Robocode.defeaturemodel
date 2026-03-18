@@ -18,14 +18,21 @@
       </features>
       <features minCardinality="1" maxCardinality="1" name="SelectEnemy"/>
       <features minCardinality="1" maxCardinality="1" name="Gun">
-        <groups maxCardinality="2">
+        <groups maxCardinality="1">
           <features maxCardinality="1" name="FireGunRange"/>
           <features maxCardinality="1" name="AlwaysFireGun"/>
+          <features maxCardinality="1" name="Cannon"/>
         </groups>
+      <features minCardinality="1" maxCardinality="1" name="SelectEnemy">
+        <groups minCardinality="1" maxCardinality="1">
+          <features maxCardinality="1" name="RandomSelectEnemy"/>
+        </groups>
+      </features>
       </features>
       <features minCardinality="1" maxCardinality="1" name="Targeting">
         <groups maxCardinality="1">
           <features maxCardinality="1" name="NearestEnemyTargeting"/>
+          <features maxCardinality="1" name="NaiveTargeting"/>
         </groups>
       </features>
     </groups>

@@ -1,0 +1,17 @@
+delta NaiveTargeting {
+    modifies jab.module.Targeting {
+        modifies target() {
+            // Only attempt to aim if a target has been selected
+            if (bot.enemy != null) {
+                // Calculate the absolute angle to the enemy
+                double absoluteBearing = bot.getHeadingRadians() + bot.enemy.bearingRadians;
+                
+                // Calculate how much the gun needs to turn to match that angle
+                double gunTurnAmt = (absoluteBearing - bot.getGunHeadingRadians());
+                
+                // Turn the gun
+                bot.setTurnGunRightRadians(gunTurnAmt);
+            }
+        }
+    }
+}
